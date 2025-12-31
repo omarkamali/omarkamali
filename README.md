@@ -1,6 +1,6 @@
-# Building AI that speaks every language 🌎🌍🌏
+# Building AI for every language and culture 🌎🌍🌏
 
-It's a-me, Omario! I build infrastructure for the next 3 billion AI users and developers. Not the ones in Silicon Valley, but the ones whose languages are still called "low-resource" like it’s their problem and a sealed fate.
+It's a-me, Omario! I build infrastructure for the next 3 billion AI users and developers. Not the ones in Silicon Valley, but the ones whose languages are still called "low-resource" like it’s their problem and a sealed fate. We will not be assimilated!
 
 Founder of **[Omneity Labs](https://omneitylabs.com)**, an independent GenAI R&D lab leveraging limited compute to drive innovation and build sovereign AI stacks for cultures the big players ignore.
 
