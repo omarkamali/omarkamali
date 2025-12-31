@@ -1,85 +1,45 @@
-# Omar Kamali
+# Building AI that speaks every language 🌎🌍🌏
 
-Building multilingual LLMs, data systems, and agentic tooling with a bias toward low‑resource languages and big lab-style training with scruffy resources.
+It's a-me, Omario! I build infrastructure for the next 3 billion AI users and developers. Not the ones in Silicon Valley, but the ones whose languages are still called "low-resource" like it’s their problem and a sealed fate.
 
-- Founder of Omneity Labs, independent GenAI R&D lab for low‑resource languages, cultural alignment and sovereign Gen AI stack development
-- Focus: pretraining data pipelines, LLM training curricula, instruction residuals, hybrid search, and multi‑provider LLM infra
-- Values: pragmatic engineering, reproducible research, and tools that make real systems easier to build
+Founder of **[Omneity Labs](https://omneitylabs.com)**, an independent GenAI R&D lab leveraging limited compute to drive innovation and build sovereign AI stacks for cultures the big players ignore.
 
----
+### The stack
 
-## TL;DR – Start here
+**Low-Resource Language Data**
+- **[wikilangs.org](https://github.com/wikilangs/wikilangs)** - Pretrained NLP models for 340+ Wikipedia languages, no GPU needed
+- **[wikipedia-monthly](https://huggingface.co/datasets/omarkamali/wikipedia-monthly)** - Fresh Wikipedia dumps in 340+ languages, updated monthly
+- **[wikisets](https://github.com/omarkamali/wikisets)** - Flexible Wikipedia dataset builder for sampling and preprocessing
 
-If you are new here, these are the best entry points:
+**NLP Tooling**
+- **[vocabulous](https://pypi.org/project/vocabulous)** - Language detection that works on messy, mislabeled data
+- **[unscript](https://github.com/omarkamali/unscript)** - Script-aware text cleaning for 340+ languages
+- **[babelvec](https://github.com/omarkamali/babelvec)** - CPU-friendly sentence embeddings with multilingual alignment
 
-- **Universal LLM client:** [`borgllm`](https://github.com/omarkamali/borgllm) – drop‑in LangChain‑compatible client for 20+ providers with API key rotation and rate‑limit handling.
-- **Wikipedia pretraining data:** [`wikisets`](https://github.com/omarkamali/wikisets) + [`wikipedia-monthly`](https://huggingface.co/datasets/omarkamali/wikipedia-monthly) – fresh monthly multilingual Wikipedia dumps and a flexible dataset builder.
-- **Instruction residuals / task arithmetic:** [`residuals`](https://github.com/omarkamali/residuals) – small, focused library for task vectors and efficient continuous pretraining workflows.
-- **Hybrid search engine:** [`semango`](https://github.com/omarkamali/semango) – lexical + semantic search (BM25 + vectors) with an HTTP API, MCP server, and search UI.
-- **GPU monitoring:** [`picomon`](https://github.com/omarkamali/picomon) – minimal curses dashboard for AMD GPU monitoring.
+**LLM Training Experiments**
+- **[CRAFT](https://github.com/omarkamali/craft)** - Contrastive learning framework for multilingual LLM alignment
+- **[residuals](https://pypi.org/project/residuals)** - Task vectors for continuous LLM pretraining without retraining from scratch
+- **[curriculus](https://github.com/omarkamali/curriculus)** - Curriculum learning for training efficiency (3.5% gains)
 
-Everything else tends to plug into one of these pillars: data, training, or serving.
+**Dev Tooling**
+- **[borgllm](https://github.com/omarkamali/borgllm)** - Zero-config LLM router for 20+ providers, handles key rotation and rate limits
+- **[hypersets](https://github.com/omarkamali/hypersets)** - Query massive HF datasets with DuckDB instead of loading into memory
+- **[zippy-data](https://github.com/zippy-data/zippy)** - Human-readable document store (JSONLs in a zip), 4M+ writes/sec in Rust
+- **[prepress](https://github.com/omneity-labs/prepress)** - Polyglot release management for Python, Rust, Node.js projects
 
----
+**Operations**
+- **[picomon](https://github.com/omarkamali/picomon)** - GPU monitoring for AMD, NVIDIA, and Apple Silicon
 
-## What I work on
 
-- **Multilingual & low‑resource LLMs.** From data acquisition and cleaning to curriculum learning, instruction tuning, and task vectors – with a focus on languages often ignored by big tech.
-- **Data systems for pretraining.** Large‑scale text pipelines, monthly‑updated Wikipedia dumps, and tools for querying terabyte‑scale corpora without fully downloading them.
-- **Agentic & production tooling.** Universal LLM routers, hybrid search engines, and small utilities that make real‑world deployments less painful.
+### Let's talk
 
-If you are building something in this space and want to collaborate, open an issue on the relevant repo or reach out via the links at the end.
+- **Building in MENA?** Let's compare notes on cultural alignment
+- **Have GPUs?** Omneity Labs is always hungry for compute partners
+- **Interested in multilingual AI?** Come talk about bootstrapping NLP for 340+ languages
+- **Want AI trained for your domain?** I build custom LLMs and agentic systems that drive real bespoke software
 
----
+[Blog](https://omarkamali.com) | [Twitter](https://x.com/OmarKamali) | [Hugging Face](https://huggingface.com/OmarKamali) | **omar@omneitylabs.com**
 
-## Projects by area
+***
 
-### 1. LLM training, curricula, and task vectors
-
-- **[`craft`](https://github.com/omarkamali/craft)** – Contrastive Representation Aware Fine‑Tuning toolkit for representation‑sensitive LLM finetuning experiments.
-- **[`curriculus`](https://github.com/omarkamali/curriculus)** – Progressive curriculum learning for LLM training with fine‑grained schedule and difficulty control.
-- **[`residuals`](https://github.com/omarkamali/residuals)** – Lightweight library for instruction residuals / task vectors, aimed at efficient continuous pretraining and task arithmetic workflows.
-
-Use these if you care about shaping *how* a model learns (curriculum) and *what* gets injected post‑hoc (task vectors, residuals).
-
----
-
-### 2. Data & pretraining pipelines
-
-- **[`wikisets`](https://github.com/omarkamali/wikisets)** – Flexible Wikipedia dataset builder with language‑aware sampling and pretraining‑oriented splits, built on top of the monthly Wikipedia dumps.
-- **[`wikipedia-monthly`](https://huggingface.co/datasets/omarkamali/wikipedia-monthly)** – Fresh, cleaned Wikipedia dumps for 300+ languages, updated monthly and ready to load via Hugging Face Datasets.
-- **[`hypersets`](https://github.com/omarkamali/hypersets)** – Query huge datasets with simple SQL using DuckDB; work with terabyte‑scale Hugging Face datasets without fully downloading them.
-- **[`unscript`](https://github.com/omarkamali/unscript)** – Script‑aware text cleaning for NLP and training, with attention to multilingual and multi‑script corpora.
-- **[`vocabulous`](https://github.com/omarkamali/vocabulous)** – Bootstrapping language detection from noisy and ambiguous data, useful for messy multilingual sources.
-
-If you are assembling a multilingual or low‑resource pretraining corpus, this is the stack to look at first.
-
----
-
-### 3. LLM infrastructure, agents, and search
-
-- **[`borgllm`](https://github.com/omarkamali/borgllm)** – Zero‑config universal LLM client with support for many providers, API key rotation, rate‑limit management, and LangChain compatibility.
-- **[`semango`](https://github.com/omarkamali/semango)** – Hybrid search engine combining BM25 and vector search, with an HTTP API, MCP server, and an embedded search UI for quick experiments.
-- **Omneity Labs API (external)** – Sovereign Gen AI platform serving Multilingual LLMs, embeddings, translation, and transliteration for low‑resource languages, powering production systems for languages like Moroccan Arabic.
-
-These are the right tools if you are wiring LLMs into applications, need routing across providers, or want search that actually bridges lexical and semantic retrieval.
-
----
-
-### 4. Monitoring, utilities, and misc
-
-- **[`picomon`](https://github.com/omarkamali/picomon)** – Minimal terminal dashboard for monitoring AMD GPUs via `amd-smi`, ideal for small GPU boxes or home labs.
-- **Other small utilities** – This account also contains smaller experiments and tooling prototypes, chat templates etc; expect pragmatic code focused on solving a specific pain point rather than polished frameworks.
-
-If you are running AMD‑based training or experimentation setups, picomon is usually the quickest win.
-
----
-
-## Writing, talks, and where to find me
-
-- Website: https://omarkamali.com
-- Omneity Labs: https://omneitylabs.com
-- Hugging Face (datasets, releases): https://huggingface.co/omarkamali
-- X (short updates, threads): https://x.com/OmarKamali
-
-If you are working on multilingual LLMs, low‑resource NLP, or agentic systems and want to compare notes, you are very welcome to reach out.
+**P.S.** Most tools exist because I hit a wall building [Sawalni](https://sawalni.com) (first LLM for Moroccan Darija in arabic and latin scripts) or optimizing GPU usage while running experiments. Declarative beats imperative, but convention over configuration as the best tools are the ones you can `pip install` and simply forget.
